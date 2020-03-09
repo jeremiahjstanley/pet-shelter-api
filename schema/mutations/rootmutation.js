@@ -1,6 +1,5 @@
 const graphql = require("graphql");
-const configuration = require("../../knexfile");
-const knex = require("knex")(configuration);
+const knex = require("../../db/knex")
 const PetType = require('../types/pet')
 
 const {
