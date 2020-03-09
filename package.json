@@ -1,20 +1,26 @@
 {
   "name": "pet-shelter-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Owl Labs Technical Assessment",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremiahjstanley/pet-shelter-api"
+  },
+  "homepage": "https://github.com/jeremiahjstanley/pet-shelter-api#readme",
+
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql": "^14.6.0",
-    "mongoose": "^5.9.3"
+    "knex": "^0.20.11",
+    "pg": "^7.18.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
