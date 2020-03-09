@@ -1,6 +1,6 @@
 const graphql = require("graphql");
 
-const { GraphQLID, GraphQLInt, GraphQLObjectType, GraphQLString } = graphql;
+const { GraphQLID, GraphQLObjectType, GraphQLString } = graphql;
 
 const PetType = new GraphQLObjectType({
   name: "Pet",
@@ -10,8 +10,8 @@ const PetType = new GraphQLObjectType({
     type: { type: GraphQLString },
     breed: { type: GraphQLString, resolve: ({ breed }) => breed },
     location: { type: GraphQLString, resolve: ({ location }) => location },
-    latitude: { type: GraphQLInt },
-    longitude: { type: GraphQLInt }
+    latitude: { type: GraphQLString },
+    longitude: { type: GraphQLString }
   })
 });
 

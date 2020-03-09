@@ -7,7 +7,6 @@ const {
   GraphQLNonNull,
   GraphQLObjectType,
   GraphQLString,
-  GraphQLFloat
 } = graphql;
 
 const RootMutation = new GraphQLObjectType({
@@ -22,8 +21,8 @@ const RootMutation = new GraphQLObjectType({
         type: { type: GraphQLNonNull(GraphQLString) },
         breed: { type: GraphQLNonNull(GraphQLString) },
         location: { type: GraphQLNonNull(GraphQLString) },
-        latitude: { type: GraphQLNonNull(GraphQLFloat) },
-        longitude: { type: GraphQLNonNull(GraphQLFloat) }
+        latitude: { type: GraphQLNonNull(GraphQLString) },
+        longitude: { type: GraphQLNonNull(GraphQLString) }
       },
       resolve: async (
         _,
@@ -44,8 +43,8 @@ const RootMutation = new GraphQLObjectType({
         type: { type: GraphQLString },
         breed: { type: GraphQLString },
         location: { type: GraphQLString },
-        latitude: { type: GraphQLFloat },
-        longitude: { type: GraphQLFloat }
+        latitude: { type: GraphQLString },
+        longitude: { type: GraphQLString }
       },
       resolve: async (_, args) => {
         const updatedProperties = Object.keys(args)
