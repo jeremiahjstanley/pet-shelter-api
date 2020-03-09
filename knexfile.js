@@ -1,29 +1,22 @@
-require('dotenv').config({path: 'path_to_env_file'});
-
 module.exports = {
   development: {
     client: "pg",
-    connection: {
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASS,
-      database: process.env.DB_NAME
-    },
+    connection: "postgres://localhost/pet_shelter",
     migrations: {
-      directory: "./db/migrations"
+      directory: __dirname + "/db/migrations"
     },
     seeds: {
-      directory: "./db/seeds"
+      directory: __dirname + "/db/seeds"
     }
   },
   production: {
-    client: "postgresql",
-    connection: process.env.DATABASE_URL + `?ssl=true`,
+    client: "pg",
+    connection: process.env.DATABASE_URL,
     migrations: {
-      directory: "./db/migrations"
+      directory: __dirname + "/db/migrations"
     },
     seeds: {
-      directory: "./db/seeds"
+      directory: __dirname + "/db/seeds"
     }
   }
 };
