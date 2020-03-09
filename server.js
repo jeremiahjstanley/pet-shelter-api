@@ -11,12 +11,8 @@ app.locals.title = "Pet Shelter API";
 
 app.set("port", process.env.PORT || 4000);
 
-app.get('/'), (request, response) => {
-	response.send(`${app.locals.title} is available at /graphql `);
-};
-
 app.use(
-  "/graphql",
+  "/",
   graphqlHTTP({
     schema,
     graphiql: true
